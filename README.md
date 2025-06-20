@@ -1,1 +1,0 @@
-# hackmap-haifa
