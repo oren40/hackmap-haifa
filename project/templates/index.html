@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HackMap Haifa</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2sJ3DpKhyv7BoEXeA9dhOYRLvyjQrwE/5uAb9Y8="
+    crossorigin=""
+  />
+  <style>
+    body { margin:0; font-family:sans-serif }
+    #map { height: 60vh; }
+    #form { padding:1rem; }
+    label { display:block; margin-top:.5rem; }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center">HackMap Haifa</h1>
+
+  <div id="map"></div>
+
+  <div id="form">
+    <h3>הוסף אירוע</h3>
+    <label>כותרת: <input id="title"></label>
+    <label>תיאור: <input id="desc"></label>
+    <label>קטגוריה:
+      <select id="cat">
+        <option>Hackathon</option>
+        <option>Conference</option>
+        <option>Meetup</option>
+      </select>
+    </label>
+    <label>תאריך: <input type="date" id="date"></label>
+    <button id="save">שמור</button>
+    <span id="msg"></span>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o9N1jv6Wt0+WTLY2NS19bt8OZ2w6uEFuwVvHycxo934="
+    crossorigin=""></script>
+
+  <!-- JS משלך -->
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
